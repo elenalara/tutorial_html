@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Sunnydale School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1E90FF;
+        }
+        #upcoming-events {
+            background-color: #FFFFE0;
+        }
+        .outdoor {
+            background-color: #AFEEEE;
+            padding: 5x;
+            border: 1px solid #B0E0E6;
+        }
+        .section {
+            background-color: #f8f3f3;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Sunnydale School</h1>
     <p>Welcome to Sunnydale School, dedicated to fostering a love of learning in every student.</p>
     
-    <h2>Mission Statement</h2>
+    <h2><span style="color: #32CD32;">Mission Statement</span></h2>
     <p>Our mission is to provide a quality education that prepares all children for a successful future.</p>
     
-    <h2>Upcoming Events</h2>
+    <h2 id="upcoming-events"><span style="color: #FFA07A;">Upcoming Events</span></h2>
     <ul>
-        <li>Science Fair - June 10</li>
-        <li>Art Exhibition - June 15</li>
-        <li>Sports Day - June 20</li>
+        <li data-even-type="indoor" title="Event Type: Indoor">Science Fair - <span style="font-weight: bold; color: red;">June 10</span></li>
+        <li class="outdoor" data-even-type="outdoor" title="Event Type: Outdoor">Art Exhibition - <span style="font-weight: bold; color: red;">June 15</span></li>
+        <li class="outdoor" data-even-type="outdoor" title="Event Type: Outdoor">Sports Day - <span style="font-weight: bold; color: red;">June 20</span></li>
     </ul>
     
-    <h2>Contact Us</h2>
-    <p>Email: info@sunnydaleschool.com</p>
-    <p>Phone: 555-1234</p>
+    <div class="section"></div>
+        <h2><span style="color: #20B2AA;">Contact Us</span></h2>
+        <p title="Click to copy email">Email: info@sunnydaleschool.com</p>
+        <p title="Click to copy phone number">Phone: 555-1234</p>
+        <button onclick="alert('Thanks for reaching out!')">Contact Us</button>
+    </div>
 </body>
 </html>
