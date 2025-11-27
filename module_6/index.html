@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <title>Discover Your World</title>
     <!-- Task 1: Add the favicon link here -->
+    <link rel="icon" type="image/png" href="/resources/media/web-favicon.png">
     <!-- Task 2: Add link to script here -->
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Discover Your World <!-- Task 3: Add an emoji here --></h1>
+    <h1>Discover Your World &#x1F30D <!-- Task 3: Add an emoji here --></h1>
     <p>Click the button to learn about the continent you're on and some famous geographical features.</p>
     <!-- Task 4: Add a button for displaying geolocation information here -->
+     <button onclick="getLocation()" id="getLocation">Discover Location</button>
 
     <img src="/resources/media/continents.jpg" usemap="#image-map" alt="World Map">
     <map name="image-map">
         <!-- Task 5: Add area tags for continents here -->
+        <area id="north-america" alt="North America" title="North America" coords="386,283,41,17" shape="rect" onclick="showContinentInfo('North America')">
+        <area id="south-america" alt="South America" title="South America" coords="209,501,358,288" shape="rect" onclick="showContinentInfo('South America')">
+        <area id="europe" alt="Europe" title="Europe" coords="391,68,505,217" shape="rect" onclick="showContinentInfo('Europe')">
+        <area id="africa" alt="Africa" title="Africa" coords="533,217,387,448" shape="rect" onclick="showContinentInfo('Africa')">
+        <area id="asia" alt="Asia" title="Asia" coords="893,153,506,1" shape="rect" onclick="showContinentInfo('Asia')">
+        <area id="australia-and-oceania" alt="Australia and Oceania" title="Australia and Oceania" coords="679,353,872,480" shape="rect" onclick="showContinentInfo('Australia and Oceania')">
     </map>
 </body>
 </html>
