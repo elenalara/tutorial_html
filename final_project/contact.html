@@ -1,9 +1,12 @@
+<!-- The form is straightforward, inviting users to connect by providing essential fields for their name, email, subject, and a text area for their message. The *required* attribute ensures that the form cannot be submitted without filling out these crucial fields, thus improving form quality and engagement. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Contact Us - Global Adventures Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -11,14 +14,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home page</a></li>
-                <li>
-                    <a>Cities</a>
-                    <ul>
-                        <li><a href="city-paris.html">Paris</a></li>
-                        <li><a href="city-tokyo.html">Tokyo</a></li>
-                        <li><a href="city-newyork.html">New York</a></li>
-                    </ul>
-                </li>
+                <li><a href="city-paris.html">Paris</a></li>
+                <li><a href="city-tokyo.html">Tokyo</a></li>
+                <li><a href="city-newyork.html">New York</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="subscribe.html">Subscribe</a></li>
@@ -29,20 +27,20 @@
     <main>
         <section id="contact-form">
             <h2>Get in Touch</h2>
-            <form method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+            <form action="/submit-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject" required><br><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-                <input type="submit" value="Submit">
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
@@ -55,6 +53,17 @@
                 <li><a href="#">Terms of Use</a></li>
             </ul>
         </nav>
-        <p>&copy; 2035 Global Adventures Blog</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Faceblock</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Tweety</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instadrama</a>
+        </div>
+        <div class="contact-info">
+            <p>Contact us at: <a href="mailto:contact@globaladventuresblog.com">contact@example-globaladventuresblog.com</a></p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2035 Global Adventures Blog</p>
+        </div>
     </footer>
+</body>
 </html>

@@ -1,3 +1,5 @@
+<!-- The form is straightforward, inviting users to connect by providing essential fields for their name, email, subject, and a text area for their message. The *required* attribute ensures that the form cannot be submitted without filling out these crucial fields, thus improving form quality and engagement. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscribe - Global Adventures Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -13,14 +16,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home page</a></li>
-                <li>
-                    <a>Cities</a>
-                    <ul>
-                        <li><a href="city-paris.html">Paris</a></li>
-                        <li><a href="city-tokyo.html">Tokyo</a></li>
-                        <li><a href="city-newyork.html">New York</a></li>
-                    </ul>
-                </li>
+                <li><a href="city-paris.html">Paris</a></li>
+                <li><a href="city-tokyo.html">Tokyo</a></li>
+                <li><a href="city-newyork.html">New York</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="subscribe.html">Subscribe</a></li>
@@ -31,16 +29,16 @@
     <main>
         <section id="subscribe-form">
             <h2>Stay Updated!</h2>
-            <form method="post">
-                <label for="email">Enter your email address:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <form action="/subscribe" method="post">
+                <label for="email">Enter your email address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-                <label for="terms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    I agree to receive newsletters.
-                </label><br><br>
+                <div>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to receive email updates and promotions.</label>
+                </div>
 
-                <input type="submit" value="Subscribe">
+                <button type="submit">Subscribe Now</button>
             </form>
     </main>
 
@@ -52,6 +50,17 @@
                 <li><a href="#">Terms of Use</a></li>
             </ul>
         </nav>
-        <p>&copy; 2035 Global Adventures Blog</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Faceblock</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Tweety</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instadrama</a>
+        </div>
+        <div class="contact-info">
+            <p>Contact us at: <a href="mailto:contact@globaladventuresblog.com">contact@example-globaladventuresblog.com</a></p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2035 Global Adventures Blog</p>
+        </div>
     </footer>
+</body>
 </html>
